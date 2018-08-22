@@ -38,6 +38,41 @@ Similarities and differences between classification and regression trees:
 5) They follow top-down greedy approach known as recusrsive binary splitting because they start splitting from root node from top to the terminal node making sure that it uses the best predictor hence it's called greedy
 6) In both cases , splitting results into fully grwon trees until stopping criterion is reached which might lead to overfit to overcome this problem prining is used.
 
+How does a tree decide where to split??
+The decision of making stratergic split heavily affects tree's accuracy, which is different for classification and regression trees. decision tree uses multiple algos to decide the best split
+The creation of sub nodes increases the homogenity of the sub nodes. Decision tree splits the nodes on all available variables and the decide the split which is most homogeneuos sub-node.
+
+The algo selection is based on type of target variable. Let's look at four commonly used algos.
+
+1) Gini Index:
+Gini index says if we select two observations at random then they belong to same class and probability of this is 1 if the population is pure.
+1) it works with categorical target variable "failiure" and "success"
+2) It performs only bimary splits
+3) Higher the gini value higher will be homogenity
+4) CART uses GINI method to create splits
+
+Steps to calculate Gini for a split:
+1) Calculate Gini for sub-nodes using sum of square of proability of success and failire of that particular node (p^2+q^2)
+2) Calculate gini for split using weighted gini score of each node of that split
+
+Referring to example used above, where we want to segregate the students based on target variable ( playing cricket or not ). In the snapshot below, we split the population using two input variables Gender and Class. Now, I want to identify which split is producing more homogeneous sub-nodes using Gini index.
+
+Decision Tree, Algorithm, Gini IndexSplit on Gender:
+
+Calculate, Gini for sub-node Female = (0.2)*(0.2)+(0.8)*(0.8)=0.68
+Gini for sub-node Male = (0.65)*(0.65)+(0.35)*(0.35)=0.55
+Calculate weighted Gini for Split Gender = (10/30)*0.68+(20/30)*0.55 = 0.59
+Similar for Split on Class:
+
+Gini for sub-node Class IX = (0.43)*(0.43)+(0.57)*(0.57)=0.51
+Gini for sub-node Class X = (0.56)*(0.56)+(0.44)*(0.44)=0.51
+Calculate weighted Gini for Split Class = (14/30)*0.51+(16/30)*0.51 = 0.51
+Above, you can see that Gini score for Split on Gender is higher than Split on Class, hence, the node split will take place on Gender.
+
+
+
+
+
 
 
 
