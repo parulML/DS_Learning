@@ -55,8 +55,6 @@ Steps to calculate Gini for a split:
 1) Calculate Gini for sub-nodes using sum of square of proability of success and failire of that particular node (p^2+q^2)
 2) Calculate gini for split using weighted gini score of each node of that split
 
-Referring to example used above, where we want to segregate the students based on target variable ( playing cricket or not ). In the snapshot below, we split the population using two input variables Gender and Class. Now, I want to identify which split is producing more homogeneous sub-nodes using Gini index.
-
 Decision Tree, Algorithm, Gini IndexSplit on Gender:
 
 Calculate, Gini for sub-node Female = (0.2)*(0.2)+(0.8)*(0.8)=0.68
