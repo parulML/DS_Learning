@@ -1,5 +1,5 @@
 Tree Based Models can do following tasks efficiently :
-1) Non-linear Models
+1) Create non-linear Models
 2) Both Classification/Regression
 
 In this we split the data into two or more sub-population based on most significant splitter/differentiater in input variables.
@@ -7,3 +7,39 @@ In this we split the data into two or more sub-population based on most signific
 Descision tress are of two types based on the type of target variables:
 1) Categorical variable decision tree
 2) Continuous variable decision tree
+
+Basic terminologies used in decision trees:
+1) Root node : Represents entire population which further gets divided into 2 or more homogeneous sets
+2) Spliting : Process of dividing a node into 2 or more sub-nodes
+3) Decision Node : When a node splits into two or more sub-nodes it's termed as decision node
+4) Leaf/terminal Node : Nodes that do not split are called leaf or terminal nodes
+5) Pruning : When we remove sub nodes of decision tree it's called pruning which is opposite of splitting
+6) Parent/Child Nodes : A node that is divided into sub nodes is called parent node and sub-nodes are called child nodes
+
+Advantages of decision tree:
+1) Easy to understand
+2) Useful in data exploration
+3) Less data cleaning required
+4) Data type is not a constraint
+5) Non-parametric method : probability distribution does not matter
+
+Disadvantages:
+1) Over-fitting
+2) Not fit for continuous variables : While working with continuous variables it looses information while categorising variables into different categories
+
+Regression vs Classification trees:
+Since in decision trees terminal leaves are at the bottom hence decision trees are upside down.
+
+Similarities and differences between classification and regression trees:
+1) In regression tree value obtained by terminal node is mean response of observations falling into that region
+2) In case of classification value obtained by terminal node is mode of observations falling into that region
+3) Spliiting process continues until a user defined splitting criterion is reached for example we can tell an algorithm to stop when number of observations er node become less than 50
+4) They follow recursive binary tree process
+5) They follow top-down greedy approach known as recusrsive binary splitting because they start splitting from root node from top to the terminal node making sure that it uses the best predictor hence it's called greedy
+6) In both cases , splitting results into fully grwon trees until stopping criterion is reached which might lead to overfit to overcome this problem prining is used.
+
+
+
+
+
+What is Covariance : Property of a function of retaining it's form even when the variables get linearly transfored. 
